@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <th>&nbsp;</th>
+    <th *ngFor="let key of tableHeadings">
+      {{ key }}
+    </th>
+  </tr>
+  <tr *ngFor="let data of deviceData | keyvalue">
+    <td>
+      <input
+        type="checkbox"
+        (change)="deviceCheckbox($event)"
+        [checked]="data.value.checked"
+        [attr.id]="data.value.name"
+      />
+    </td>
+    <td>{{ data.value.name }}</td>
+    <td>{{ data.value.device }}</td>
+    <td>{{ data.value.path }}</td>
+    <td>
+      <span [class.status]="data.value.status === 'available'"></span>
+      {{ data.value.status }}
+    </td>
+  </tr>
+</table>

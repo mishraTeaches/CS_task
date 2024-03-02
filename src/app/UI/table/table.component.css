@@ -1,0 +1,23 @@
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200, 200, 200);
+  letter-spacing: 1px;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+td,
+th {
+  border-bottom: 1px solid rgb(190, 190, 190);
+  padding: 10px 20px;
+  text-align: left;
+}
+.status {
+  width: 10px;
+  height: 10px;
+  background: lightgreen;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+}
